@@ -3,8 +3,7 @@
 This codebook explains step by step the analysis performed on the UCI HAR Dataset in order to obtain
 a tidy summary of the mean values of some measurement of interest calculated for each subject 
 of the experiment and for each activity he/she performed.
-A complete description of the original data set can be found at 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+A complete description of the original data set can be found at this [link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 but the relevant features for the subsequent analysis are briefly recalled below.
 
 ## UCI HAR Dataset
@@ -42,20 +41,20 @@ Note that these data frames can be constructed by the readUciHarData() function.
 
 Data are processed as follow:
 
-*1. A column "session" is added to dataTest and dataTrain with the value "test" and "train", respectively.
+1. A column "session" is added to dataTest and dataTrain with the value "test" and "train", respectively.
 Then, dataTest and dataTrain are combined together forming one data frame, called dataComb, 
 which has the same number of columns and the number of rows equal to the sum of the two input data frames, 
 i.e. 10299 observation and 564 variables
 
-*2. From dataComb are selected the variables of interest, i.e. the mean and the standard deviation of the 
+2. From dataComb are selected the variables of interest, i.e. the mean and the standard deviation of the 
 features described above, the subject identifier, the activity identifier, and the session, creating a new 
 data frame called dataSub
 
-*3. In dataSub the labels of the activity identifiers are changed from integers into descriptive variables, accordingly to the codification described by the original data set
+3. In dataSub the labels of the activity identifiers are changed from integers into descriptive variables, accordingly to the codification described by the original data set
 
-*4. In dataSub the variable names are modified to be more readable by eliminating special characters
+4. In dataSub the variable names are modified to be more readable by eliminating special characters
 
-*5. From dataSub is created a summary with the average of each measurement calculated for each activity 
+5. From dataSub is created a summary with the average of each measurement calculated for each activity 
 and for each subject. The variable names are modified to be more readable and descriptive.
 
 
